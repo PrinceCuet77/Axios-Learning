@@ -30,26 +30,20 @@ npm install axios
 -   error in error.response
 
 ```js
-// Importing axios from 'axios' library
 import axios from 'axios'
 
-// 'async' because it returns the promise
 const fetchData = async () => {
-    // Because of promise, I must use try-catch for error handling
     try {
         // axios.get(), axios.post(),axios.put(), axios.delete()
-        const response = await axios(url) // Default GET request
-        // const response = await axios.get(url) // Same as previous line
-        // console.log(response)
+        const response = await axios(url) 
 
         const data = response.data
         console.log(data)
     } catch (error) {
-        console.log(error.response) // 'axios' returns error in response
+        console.log(error.response) 
     }
 }
 
-// Call that fetching function from 'useEffect'
 useEffect(() => {
     fetchData()
 }, [])

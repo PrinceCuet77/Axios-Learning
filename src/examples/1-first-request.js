@@ -23,6 +23,7 @@ const FirstRequest = () => {
         }
     }
 
+    // Call that fetching function from 'useEffect'
     useEffect(() => {
         fetchData()
     }, [])
