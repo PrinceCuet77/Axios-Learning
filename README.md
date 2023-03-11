@@ -30,6 +30,7 @@ npm install axios
 -   error in error.response
 
 ```js
+// Importing axios from 'axios' library
 import axios from 'axios'
 
 // 'async' because it returns the promise
@@ -47,6 +48,11 @@ const fetchData = async () => {
         console.log(error.response) // 'axios' returns error in response
     }
 }
+
+// Call that fetching function from 'useEffect'
+useEffect(() => {
+    fetchData()
+}, [])
 ```
 
 ### Headers
